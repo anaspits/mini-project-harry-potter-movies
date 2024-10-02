@@ -1,0 +1,31 @@
+<!-- <table>
+  <thead></thead>
+  <tbody>
+    @for (item of movies; track item) {
+    <tr>
+      <td>{{ item.title }} : {{ item.release_date }}</td>
+      <td>
+        <p-button label="Details"></p-button>
+      </td>
+    </tr>
+    }
+  </tbody>
+</table> -->
+<div class="flex justify-center">
+  <ul>
+    @for (item of movies; track item) {
+    <li>
+      <div class="flex justify-between">
+        <div>
+          <span class="font-bold">{{ item.title }}</span>
+          <p class="text-sm">Release date: {{ item.release_date }}  Budget: ${{item.budget}}  Duration:{{item.duration}}</p>
+        </div>
+
+        <div>
+          <p-button label="Details" styleClass="bg-secondary-grey"></p-button>
+        </div>
+      </div>
+    </li>
+    }
+  </ul>
+</div>
