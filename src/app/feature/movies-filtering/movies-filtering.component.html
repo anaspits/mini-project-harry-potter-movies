@@ -1,0 +1,24 @@
+<div class="bg-grey-light p-4 m-8">
+  <div class="font-bold">Filters</div>
+  <div class="xl:columns-2 xl:gap-x-8">
+    <div>
+      <label>Title</label>
+      <input
+        type="text"
+        pInputText
+        [(ngModel)]="title"
+        (ngModelChange)="filterMovies()"
+      />
+    </div>
+    <div class="flex">
+      <label class="self-center">Release Year</label>
+
+      <input
+        type="number"
+        pInputText
+        [(ngModel)]="year"
+        (ngModelChange)="filterMovies()"
+      />
+    </div>
+  </div>
+</div>

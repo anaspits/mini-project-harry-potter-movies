@@ -1,17 +1,4 @@
-<div class="bg-grey-light p-4 m-8">
-  <div class="font-bold">Filters</div>
-  <div class="xl:columns-2 xl:gap-x-8">
-    <div>
-      <label>Title</label>
-      <input type="text" pInputText [(ngModel)]="title" (ngModelChange)="filterMovies()"/>
-    </div>
-    <div>
-      <label>Release Year</label>
-      <input type="text" pInputText [(ngModel)]="year" (ngModelChange)="filterMovies()"/>
-    </div>
-  </div>
-</div>
-
+<app-movies-filtering [title]="title" [year]="year" [movies]="movies" [filteredMovies]="filteredMovies" (newFilteredMovies)="applyNewFilteredMovies($event)"></app-movies-filtering>
 <div class="flex justify-center">
   <ul>
     @for (item of filteredMovies; track item) {
