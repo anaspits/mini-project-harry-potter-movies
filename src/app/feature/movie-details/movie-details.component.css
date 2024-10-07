@@ -1,11 +1,5 @@
-/* .movie-poster {
-  width: 100%;
-  max-width: 250px;
-  height: auto;
-} */
-
 .header-title {
-  background-color: #e5e9f0 !important; /* here */
+  background-color: #e5e9f0 !important;
   text-align: end;
   border-right: 1px solid black !important;
 }

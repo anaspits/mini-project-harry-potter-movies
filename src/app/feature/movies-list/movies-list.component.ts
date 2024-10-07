@@ -5,12 +5,13 @@ import { ButtonModule } from 'primeng/button';
 import { InputTextModule } from 'primeng/inputtext';
 import { MovieOption } from './models/movie-option.model';
 import { MoviesService } from '../services/movies.service';
+import { DurationPipe } from '../../shared/pipes/duration.pipe';
 import { catchError, of, Subject, takeUntil } from 'rxjs';
 
 @Component({
   selector: 'app-movies-list',
   standalone: true,
-  imports: [FormsModule, ButtonModule, InputTextModule],
+  imports: [FormsModule, ButtonModule, InputTextModule, DurationPipe],
   templateUrl: './movies-list.component.html',
   styleUrl: './movies-list.component.css'
 })
@@ -53,7 +54,7 @@ export class MoviesListComponent  implements OnInit {
       const matchesTitle = movie.title.toLowerCase().includes(titleQuery);
       const matchesYear = movie.release_date.toLowerCase().includes(yearQuery);
 
-      return (!titleQuery || matchesTitle) && (!yearQuery || matchesYear); //here
+      return (!titleQuery || matchesTitle) && (!yearQuery || matchesYear);
     });
   }
 

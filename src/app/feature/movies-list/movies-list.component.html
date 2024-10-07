@@ -1,4 +1,4 @@
-<div class="bg-grey-light p-4">
+<div class="bg-grey-light p-4 m-8">
   <div class="font-bold">Filters</div>
   <div class="xl:columns-2 xl:gap-x-8">
     <div>
@@ -19,11 +19,13 @@
       <div class="flex justify-between">
         <div>
           <span class="font-bold">{{ item.title }}</span>
-          <p class="text-sm">Release date: {{ item.release_date }}  Budget: ${{item.budget}}  Duration:{{item.duration}}</p>
+          <p class="text-sm">Release date: {{ item.release_date }}, Budget: ${{item.budget}} million,  Duration: {{item.duration | duration}}</p>
         </div>
 
         <div>
-          <p-button label="Details" styleClass="bg-secondary-grey" (click)="navigateToDetails(item.id)"></p-button>
+          <p-button styleClass="bg-secondary-grey" (click)="navigateToDetails(item.id)">
+            <div>Details</div>
+          </p-button>
         </div>
       </div>
     </li>
