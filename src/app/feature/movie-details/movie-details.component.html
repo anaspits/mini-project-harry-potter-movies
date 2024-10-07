@@ -1,0 +1,107 @@
+<div class="flex px-28 pl-96 m-8">
+  <!-- justify-center -->
+  <div>
+    <div class="pb-1">
+      <!-- todo fix alignment -->
+      <p-button label="Back" icon="pi pi-check" styleClass="bg-secondary-grey" (click)="goBack()"></p-button
+      ><!-- todo add icon -->
+    </div>
+    <div class="font-bold text-3xl pb-4 ml-2">
+      <h1>{{ movie?.title }}</h1>
+    </div>
+    <div class="flex ml-2 pb-4">
+      <!-- justify-center -->
+
+      <div class="pr-4">
+        <img
+          src="assets/images/fantastic-beats-and-where-to-find-them.jpg"
+          [width]="150"
+          [height]="150"
+          alt="Movie Poster"
+          class="movie-poster"
+        />
+      </div>
+      <div class="w-6/12">
+        <p><span class="font-bold">Summary: </span>{{ movie?.summary }}</p>
+      </div>
+    </div>
+
+    <div class="p-mt-4 w-3/4"> <!-- here width -->
+      <h2 class="text-center text-lg pb-4">Details</h2>
+      <table class="table-details">
+        <tbody class="border-2">
+          <tr class="grid grid-cols-3">
+            <td class="header-title font-bold">Box office</td>
+            <td class="col-span-2">{{ movie?.box_office }}</td>
+
+          </tr>
+          <tr class="grid grid-cols-3">
+            <td class="header-title font-bold">Budget</td>
+            <td class="col-span-2">{{ movie?.budget }}</td>
+
+          </tr>
+          <tr class="grid grid-cols-3">
+            <td class="header-title font-bold">Duration</td>
+            <td class="col-span-2">{{ movie?.duration }}</td>
+
+          </tr>
+          <tr class="grid grid-cols-3">
+            <td class="header-title font-bold">Producers</td>
+            <td class="col-span-2">{{ movie?.producers }}</td>
+
+          </tr>
+          <tr class="grid grid-cols-3">
+            <td class="header-title font-bold">Cinematographers</td>
+            <td class="col-span-2">{{ movie?.cinematographers }}</td>
+
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+  </div>
+</div>
+<!--  <div class="p-4">
+  <button class="p-button p-component p-button-text">
+    <span class="pi pi-arrow-left"></span> Back
+  </button>
+
+  <div class="p-grid mt-4">
+    <div class="p-col-12 p-md-3">
+      <img src="assets/fantastic-beasts.jpg" alt="Movie Poster" class="movie-poster"/>
+    </div>
+    <div class="p-col-12 p-md-9">
+      <h1>{{ movie.title }}</h1>
+      <p class="font-bold">Summary:</p>
+      <p>{{ movie.summary }}</p>
+    </div>
+  </div>
+
+  <div class="p-mt-4">
+    <h2>Details</h2>
+    <table class="p-datatable p-component">
+      <tbody>
+        <tr>
+          <td><strong>Box office</strong></td>
+          <td>{{ movie.boxOffice }}</td>
+        </tr>
+        <tr>
+          <td><strong>Budget</strong></td>
+          <td>{{ movie.budget }}</td>
+        </tr>
+        <tr>
+          <td><strong>Duration</strong></td>
+          <td>{{ movie.duration }}</td>
+        </tr>
+        <tr>
+          <td><strong>Producers</strong></td>
+          <td>{{ movie.producers }}</td>
+        </tr>
+        <tr>
+          <td><strong>Cinematographers</strong></td>
+          <td>{{ movie.cinematographers }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div> -->

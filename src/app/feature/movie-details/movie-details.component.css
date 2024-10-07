@@ -1,0 +1,25 @@
+/* .movie-poster {
+  width: 100%;
+  max-width: 250px;
+  height: auto;
+} */
+
+.header-title {
+  background-color: #e5e9f0 !important; /* here */
+  text-align: end;
+  border-right: 1px solid black !important;
+}
+
+.table-details td {
+  padding: 8px;
+  border-color: #e6e9f0;
+  background-color: inherit;
+}
+
+.table-details tbody {
+  border: 1px solid #d7dde6 !important;
+}
+
+h1 {
+  margin-bottom: 10px;
+}
