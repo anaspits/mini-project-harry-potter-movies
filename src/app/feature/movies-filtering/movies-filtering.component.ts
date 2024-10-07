@@ -21,10 +21,10 @@ export class MoviesFilteringComponent {
   >();
 
   filterMovies() {
-    const titleQuery = this.title.toLowerCase();
-    const yearQuery = this.year.toString().toLowerCase();
+    const titleQuery = this.title?.toLowerCase();
+    const yearQuery = this.year?.toString()?.toLowerCase();
 
-    const filterSubmited = (this.filteredMovies = this.movies.filter(
+    const filterSubmited = this.movies.filter(
       (movie) => {
         const matchesTitle = movie.title.toLowerCase().includes(titleQuery);
         const matchesYear = movie.release_date
@@ -33,7 +33,7 @@ export class MoviesFilteringComponent {
 
         return (!titleQuery || matchesTitle) && (!yearQuery || matchesYear);
       }
-    ));
+    );
     this.newFilteredMovies.emit(filterSubmited);
   }
 }

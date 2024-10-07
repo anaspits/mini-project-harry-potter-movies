@@ -1,5 +1,5 @@
 <app-movies-filtering [title]="title" [year]="year" [movies]="movies" [filteredMovies]="filteredMovies" (newFilteredMovies)="applyNewFilteredMovies($event)"></app-movies-filtering>
-<div class="flex justify-center">
+<div>
   <ul>
     @for (item of filteredMovies; track item) {
     <li>
