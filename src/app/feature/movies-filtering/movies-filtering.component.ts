@@ -13,8 +13,8 @@ import { MovieOption } from '../movies-list/models/movie-option.model';
 export class MoviesFilteringComponent {
   @Input() title: string = '';
   @Input() year: string = '';
-  @Input() filteredMovies: any[] = [];
-  @Input() movies: any[] = [];
+  @Input() filteredMovies: MovieOption[] = [];
+  @Input() movies:  MovieOption[] = [];
 
   @Output() newFilteredMovies: EventEmitter<MovieOption[]> = new EventEmitter<
     MovieOption[]
